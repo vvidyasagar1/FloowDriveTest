@@ -3,6 +3,7 @@ package com.app.pages;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import com.framework.appium.BaseClass;
 import com.framework.appium.CommonMethod;
@@ -24,9 +25,14 @@ public class LoginPage extends BaseClass{
 	
 	
 	public void userLoginDetails() throws Exception {
-
-		driver.findElement(email_addr).setValue("test@gmail.com");
-		driver.findElement(password).setValue("Test@1234");
+		/**
+		 * Getting data from Excel
+		 */
+		String username = ereader.getCellData("Login", 1, 0);
+		String pass = ereader.getCellData("Login", 1, 1);
+		
+		driver.findElement(email_addr).setValue(username);
+		driver.findElement(password).setValue(pass);
 		
 	}
 
@@ -45,6 +51,11 @@ public class LoginPage extends BaseClass{
 		
 		driver.findElement(grant_permission).click();
 		
+	}
+	
+	public void verifyLoginAssertion() {
+		
+		Assert.assertTrue(driver.findElement(grant_permission).isDisplayed());
 	}
 	
 	public void clickOnAllowButton() throws InterruptedException {

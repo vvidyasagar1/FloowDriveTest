@@ -3,6 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
   <parameter name="device" value="192.168.220.101:5555"></parameter>
+  <parameter name="version" value="8.0"></parameter>
     <classes>
       <class name="com.framework.tests.TheFloowTests"/>
     </classes>

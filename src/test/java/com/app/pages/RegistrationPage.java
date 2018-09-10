@@ -8,6 +8,7 @@ import com.framework.appium.CommonMethod;
 
 public class RegistrationPage extends BaseClass {
 	
+	//Object locators for  User registration
 	public By email_addr = By.xpath("//android.widget.EditText[@text='Email address']");
 	public By password = By.xpath("//android.widget.EditText[@text='Password']");
 	public By confirm_password = By.xpath("//android.widget.EditText[@text='Repeat password']");
@@ -20,21 +21,38 @@ public class RegistrationPage extends BaseClass {
 	public By register_button = By.xpath("//android.widget.Button[@text='Register']");
 	
 	
-
+/**
+ * Reusable Method for User registration
+ * @throws InterruptedException
+ */
 	public void userRegistration() throws InterruptedException {
+		
+		/**
+		 * Getting data from Excel
+		 */
+		String email = ereader.getCellData("UserRegistration", 1, 0);
+		String pass = ereader.getCellData("UserRegistration", 1, 1);
+		String confirmPassword = ereader.getCellData("UserRegistration", 1, 2);
+		String fname = ereader.getCellData("UserRegistration", 1, 3);
+		String sname = ereader.getCellData("UserRegistration", 1, 4);
+		String postaCode = ereader.getCellData("UserRegistration", 1, 5);
+		
 		Thread.sleep(3000);
-		driver.findElement(email_addr).setValue("test123@gmail.com");
-		driver.findElement(password).setValue("Test@1234");
-		driver.findElement(confirm_password).setValue("Test@1234");
-		driver.findElement(first_name).setValue("test");
-		driver.findElement(surname).setValue("test");
+		driver.findElement(email_addr).setValue(email);
+		driver.findElement(password).setValue(pass);
+		driver.findElement(confirm_password).setValue(confirmPassword);
+		driver.findElement(first_name).setValue(fname);
+		driver.findElement(surname).setValue(sname);
 		driver.findElement(dob).click();
 		driver.findElement(dob_ok).click();
-		driver.findElement(postalCode).setValue("7896541");
+		driver.findElement(postalCode).setValue(postaCode);
 		CommonMethod.scroolToText(driver, "Register");
 		
 	}
 	
+	/**
+	 * Clicking on Check box
+	 */
 	public void clickOnCheckBox() {
 		
 		driver.findElement(checkBox).click();
@@ -42,6 +60,10 @@ public class RegistrationPage extends BaseClass {
 	}
 	
 	
+	/**
+	 * Clicking on Register Button
+	 * @throws InterruptedException
+	 */
 	public void clickOnRegisterButton() throws InterruptedException {
 		
 		driver.findElement(register_button).click();

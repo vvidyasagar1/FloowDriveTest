@@ -18,8 +18,11 @@ public class TheFloowTests extends BaseClass {
 	
 	
 	
-	
-	@Test(priority=0)
+	/***
+	 * User Registration Test
+	 * @throws Exception
+	 */
+	//@Test(priority=0)
 	public void userRegistration() throws Exception {
 		try {
 			reg.userRegistration();
@@ -35,16 +38,23 @@ public class TheFloowTests extends BaseClass {
 	}
 	
 	
+	/**
+	 * User Login Test
+	 * @throws Exception
+	 */
 	@Test(priority=1)
 	public void userLoginTest() throws Exception {
 		try {
 			login.clickOnAlreadyRegistered();
 			login.userLoginDetails();
 			login.clickOnLoginButton();
+			//Login Assertion
+			login.verifyLoginAssertion();
 			login.clickOnGrantPermission();
 			login.clickOnAllowButton();
 			//login.clickOnGetStaredButton();
 			login.clickOnSettingsButton();
+			
 		}
 		catch(Throwable t) {
 			CommonMethod.takeScreenshot(driver, "User Login Test Failed");
@@ -53,7 +63,10 @@ public class TheFloowTests extends BaseClass {
 		}
 		
 	}
-	
+	/***
+	 * Change password Test
+	 * @throws Exception
+	 */
 	@Test(priority=2)
 	public void changePassword() throws Exception {
 		try {
@@ -67,7 +80,11 @@ public class TheFloowTests extends BaseClass {
 		
 	}
 	
-	@Test(priority=3)
+	/***
+	 * Logout Test
+	 * @throws Exception
+	 */
+	//@Test(priority=3)
 	public void logoutTest() throws Exception {
 		try {
 			logout.logoutTest();
