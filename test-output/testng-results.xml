@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="105218" started-at="2018-09-10T09:14:11Z" finished-at="2018-09-10T09:15:56Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="105218" started-at="2018-09-10T09:14:11Z" finished-at="2018-09-10T09:15:56Z">
+      <class name="com.framework.tests.TheFloowTests">
+        <test-method status="PASS" signature="Setup(java.lang.String)[pri:0, instance:com.framework.tests.TheFloowTests@42607a4f]" name="Setup" is-config="true" duration-ms="28159" started-at="2018-09-10T09:14:11Z" finished-at="2018-09-10T09:14:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192.168.220.101:5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="userLoginTest()[pri:1, instance:com.framework.tests.TheFloowTests@42607a4f]" name="userLoginTest" duration-ms="51482" started-at="2018-09-10T09:14:39Z" finished-at="2018-09-10T09:15:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLoginTest -->
+        <test-method status="PASS" signature="changePassword()[pri:2, instance:com.framework.tests.TheFloowTests@42607a4f]" name="changePassword" duration-ms="23149" started-at="2018-09-10T09:15:30Z" finished-at="2018-09-10T09:15:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.framework.tests.TheFloowTests@42607a4f]" name="tearDown" is-config="true" duration-ms="2372" started-at="2018-09-10T09:15:54Z" finished-at="2018-09-10T09:15:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.framework.tests.TheFloowTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
