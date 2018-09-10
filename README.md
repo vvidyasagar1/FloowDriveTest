@@ -19,7 +19,27 @@ Please find the below link for Genymotion Installation.
 
 http://www.thedevline.com/2014/04/how-to-set-up-genymotion-fast-easy.html
 
-Step 3: Install Appium for windows.
+Step 3: How to execute test on real android devices
+
+            1. For test to run on devices, we need to make sure :
+            
+            2. USB Debugging is enabled
+            
+            3. ADB lists your devices into the connected devices
+            
+            4. Changing the Desired capability as per the hardware
+            
+            5. Enabling USB Debugging:
+            
+            6. By default, Android devices do not have USB Debugging enabled, these are under Developer Options. To turn them on,
+            
+            7. Navigate to Settings app on phone
+            
+            8. Scroll down and click on the Developer Options
+            
+            8. Turn on the Developer Options and click the USB Debugging
+
+Step 4: Install Appium for windows.
     Install Appium Desktop:
     
     Step 1) Go to http://appium.io/ and click on Download Appium.
