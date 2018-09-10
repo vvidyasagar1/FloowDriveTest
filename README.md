@@ -26,11 +26,11 @@ Step 3: Install Appium for windows.
     
     Step 2) For Windows, select the exe file and download. ...
     
-    Step 3) Click on the downloaded exe.
+    Step 3) Click on the downloaded exe...
     
-    Step 4) On a Windows machine, there is no need to install Appium. ...
-    
-    Step 5) Next you will see the Server Start Window.
+    Step 4) Next you will see the Server Start Window.
+
+    Step 5) Appium will start in default port:4723
 
 Usage:
 
